@@ -221,7 +221,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-| ![Hiwoshu](https://avatars2.githubusercontent.com/u/39469118?s=460&v=4)|
+| ![Hiwoshu](https://avatars2.githubusercontent.com/u/39469118?s=460&v=4&s=150)|
 |:---------------------:|
 |  [Hiwoshu](https://github.com/hiwoshu)   |
 
