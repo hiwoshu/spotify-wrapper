@@ -6,23 +6,26 @@
 </head>
 <body>
 
-  <div id="albums"></div>
+<div id="albums"></div>
 
-  <script src="../dist/spotify-wrapper.umd.js"></script>
+<script src="../dist/spotify-wrapper.umd.js"></script>
 
-  <script>
-    const albums = spotifyWrapper.searchAlbuns('Incubus');
-    const albumsEl = document.getElementById('albums');
+<script>
+  const spotify = new SpotifyWrapper({
+    token: 'BQBbmXq391PspJV7uAByY4xBJRBjs60-wiczE0atxf5PgeYLwD9xqZaycbkA4Xw3Yiq0xsJtCtIHnTYAvpO5P74Cq0xCuPVUBbJ-XRvve8KvB96rrMk-zwqkMO8jLRwXoZ3uzBttiUKHMI1b2mBn7A3-UKVs2IPz_w'
+  })
 
-    albums
-      .then(data => data.json())
-      .then(data => {
-        markup = data.albums.items.map(item =>
+  const albums = spotify.search.albums('Paramore');
+  const albumsEl = document.getElementById('albums');
+
+  albums
+    .then(data => {
+      markup = data.albums.items.map(item =>
         `<img src='${item.images[0].url}' alt='${item.name}' />`
-        ).join('');
+      ).join('');
 
-        albumsEl.innerHTML = markup;
-    });
-  </script>
+      albumsEl.innerHTML = markup;
+    })
+</script>
 </body>
 </html>
